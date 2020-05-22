@@ -13,16 +13,24 @@ const books = [
   { title: 'Guerre et Paix', id: 748147, rented: 19 }
 ];
 
+for (var i = 0; i < books.length; i++) {
+    
+  console.log(books[i]);
+     
+    }
+
 console.log("Est-ce que tous les livres ont été au moins empruntés une fois ?");
 
 console.log("Quel est livre le plus emprunté ?");
+//highest.rented = x[0]; 
 
 console.log("Quel est le livre le moins emprunté ?");
 
 console.log("Trouve le livre avec l'ID: 873495 ");
 //console.log(books.id == 873495);
-
+//console.log(id.873495);
 
 console.log("Supprime le livre avec l'ID: 133712");
 
 console.log("Trie les livres par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé)");
+console.log(books.sort()); 

@@ -27,8 +27,27 @@ array.forEach(entrepreneurs => {
   if (entrepreneurs.year < 1980 && entrepreneurs.year >= 1970) {
     console.log(entrepreneurs);*/
     
-for (var i = 0; i < myArray.length; i++) {
+for (var i = 0; i < entrepreneurs.length; i++) {
     
-alert(myArray[i]);
-          
+console.log(entrepreneurs[i]);
+   
   }
+  const bornInThe70s = entrepreneurs.filter(element => element.year > 1969 && element.year < 1980);
+
+console.log("Liste des entrepreneurs qui sont nés dans les années 70");
+console.log(bornInThe70s);
+
+const names = bornInThe70s.map(element => `${element.first} ${element.last}`);
+
+console.log("Liste de leur nom et prénom :");
+console.log(names);
+
+const agesToday = bornInThe70s.map(element => `- ${element.first} ${element.last} a ${2020 - element.year} ans.`).join("\n");
+
+console.log("Leur âge aujourd'hui :");
+console.log(agesToday);
+
+const sortByName = bornInThe70s.sort((a,b) => (a.last > b.last) ? 1 : ((b.last > a.last) ? -1 : 0));
+
+console.log("Liste triée par ordre alphabétique :");
+console.log(sortByName)
